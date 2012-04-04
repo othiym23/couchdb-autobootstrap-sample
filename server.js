@@ -88,7 +88,7 @@ function startCouchDB(callback) {
 
       couchProcess.on('exit', function (code, signal) {
         couchProcess = null;
-        console.error('couchdn exited with code', code, 'and signal', signal);
+        console.error('couchdb exited with code', code, 'and signal', signal);
       });
     }
     else if (couchProcess) {
