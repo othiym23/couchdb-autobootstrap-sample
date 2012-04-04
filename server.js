@@ -73,7 +73,10 @@ function startCouchDB(callback) {
 
           // register a handler to help ensure couchdb is shut down cleanly
           process.on('exit', function () {
-            if (couchProcess) couchProcess.kill();
+            if (couchProcess) {
+              console.info('couchdb child process being shut down.');
+              couchProcess.kill();
+            }
           });
 
           waiting = false;
